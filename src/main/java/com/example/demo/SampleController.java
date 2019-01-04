@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,11 @@ public class SampleController {
 	@RequestMapping("/save")
 	public Employee saveEmp(@RequestBody Employee emp) {
 		return emp;		
+	}
+	
+	@PutMapping
+	public String getName(@RequestBody Employee emp) {
+		return emp.getName();
 	}
 	
 }
